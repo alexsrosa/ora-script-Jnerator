@@ -11,7 +11,7 @@ set serveroutput on
 prompt "[LOG] >>>>>> Executando script de alteração da #{Esquema e Tabela@Digite o esquema e a tabela. Ex.: esquema.tabela}"
 
 ALTER TABLE #{Esquema e Tabela@Digite o esquema e a tabela. Ex.: esquema.tabela}
-    ADD #{Campo@Campo a ser alterado@30}_ VARCHAR2(4);
+    ADD #{Campo@Campo a ser alterado@30}_ VARCHAR2(#{Tamanho@Tamanho do VARCHAR2@@number});
 
 UPDATE #{Esquema e Tabela@Digite o esquema e a tabela. Ex.: esquema.tabela}
     SET #{Campo@Campo a ser alterado@30}_ = TO_CHAR(#{Campo@Campo a ser alterado@30});

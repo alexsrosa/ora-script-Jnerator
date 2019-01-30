@@ -18,7 +18,7 @@ BEGIN
     EXECUTE IMMEDIATE 'COMMENT ON COLUMN #{Esquema e Tabela@Digite o esquema e a tabela. Ex.: esquema.tabela}.#{Campo@Campo a ser incluído@30} IS ''#{Comentário@Digite um comentário valido para o campo}''';
 
     DBMS_OUTPUT.PUT_LINE('[SUCCESS] A coluna #{Campo@Campo a ser incluído@30} foi adicionada com sucesso!');
-    
+
 EXCEPTION
     WHEN COLUMN_EXISTS THEN
         DBMS_OUTPUT.PUT_LINE('[WARN] A coluna #{Campo@Campo a ser incluído@30} que está sendo incluída já existe na tabela.');
